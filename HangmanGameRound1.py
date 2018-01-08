@@ -87,4 +87,8 @@ if targetword.__contains__(guess):
 else:
     alex.backward(100)
         
-print("Game Over! You ran out of chances!")
+guessword = input("What is the word? ")
+if guessword == targetword:
+    print("You win!")
+else:
+    print("Sorry, You lost the game!")
