@@ -12,8 +12,10 @@ targetword = list(easywords[0])
 
 print(targetword)
 
-for letter in targetword:
-    print("_")
+print("_ " * len(targetword))
+
+#for letter in targetword:
+#    print("_")
 
 
 import turtle             
@@ -25,7 +27,7 @@ guess = input("Guess a letter!")
 if targetword.__contains__(guess):
     print(guess)
     print("good job!")
-    print(((targetword.index(guess) + 1) * "_") + guess + ("_" * (4 - (targetword.index(guess)))))
+    print(((targetword.index(guess)) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess)))))
 else:
     alex.circle(50)
     print ("Wrong, guess again!" )
@@ -36,7 +38,7 @@ guess = input("Guess a letter!")
 if targetword.__contains__(guess):
     print(guess)
     print("good job!")
-    print(((targetword.index(guess) + 1) * "_") + guess + ("_" * (4 - (targetword.index(guess)))))
+    print(((targetword.index(guess)) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess)))))
 else:
     alex.right(90)
     alex.forward(100)
@@ -47,7 +49,7 @@ guess = input("Guess a letter!")
 if targetword.__contains__(guess):
     print(guess)
     print("good job!")
-    print(((targetword.index(guess) + 1) * "_") + guess + ("_" * (4 - (targetword.index(guess)))))
+    print(((targetword.index(guess)) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess)))))
 else:
     alex.right(45)
     alex.forward(50)
@@ -57,7 +59,7 @@ guess = input("Guess a letter!")
 if targetword.__contains__(guess):
     print(guess)
     print("good job!")
-    print(((targetword.index(guess) + 1) * "_") + guess + ("_" * (4 - (targetword.index(guess)))))
+    print(((targetword.index(guess) + 1) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess)))))
 else:
     alex.backward(50)
     alex.left(90)
@@ -69,7 +71,7 @@ guess = input("Guess a letter!")
 if targetword.__contains__(guess):
     print(guess)
     print("good job!")
-    print(((targetword.index(guess) + 1) * "_") + guess + ("_" * (4 - (targetword.index(guess)))))
+    print(((targetword.index(guess)) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess)))))
 else:
     alex.backward(50)
     alex.right(45)
@@ -83,12 +85,12 @@ guess = input("Guess a letter!")
 if targetword.__contains__(guess):
     print(guess)
     print("good job!")
-    print(((targetword.index(guess) + 1) * "_") + guess + ("_" * (4 - (targetword.index(guess)))))
+    print(((targetword.index(guess)) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess)))))
 else:
     alex.backward(100)
-        
+
 guessword = input("What is the word? ")
-if guessword == targetword:
+if guessword == easywords[0]:
     print("You win!")
 else:
     print("Sorry, You lost the game!")
