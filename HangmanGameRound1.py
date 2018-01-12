@@ -23,11 +23,30 @@ wn = turtle.Screen()
 alex = turtle.Turtle()
 
 
-guess = input("Guess a letter!")
+guessed = len(targetword) * "_ "
+playing = True
+
+while playing:
+    guess = input("Guess a letter!")
+    if targetword.__contains__(guess):
+        print(guess)
+        print("good job!")
+        guessed = ((targetword.index(guess)) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess))))
+        print(guessed)
+        
+        if targetword == guessed
+    else:
+        alex.circle(50)
+        print ("Wrong, guess again!" )
+
+
+
+"""
 if targetword.__contains__(guess):
     print(guess)
     print("good job!")
-    print(((targetword.index(guess)) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess)))))
+    guessed = ((targetword.index(guess)) * "_ ") + guess + ("_ " * (4 - (targetword.index(guess))))
+    print(guessed)
 else:
     alex.circle(50)
     print ("Wrong, guess again!" )
@@ -93,4 +112,4 @@ guessword = input("What is the word? ")
 if guessword == easywords[0]:
     print("You win!")
 else:
-    print("Sorry, You lost the game!")
+    print("Sorry, You lost the game!")  """
